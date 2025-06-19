@@ -18,6 +18,21 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+
+        stage('S3-Docker Image Agent'){
+           agent {
+                docker {
+                alwaysPull true
+                image 'node:18-alpine'
+                }
+          }
+          steps{
+             sh 'cat /etc/os-release'
+             sh 'node -v'
+             sh 'npm  -v'
+          }
+
+        }
     }
 
 
