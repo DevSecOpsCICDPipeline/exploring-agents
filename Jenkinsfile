@@ -35,21 +35,21 @@ pipeline {
 
         }
 
-               stage('S4-Dockerfile  Agent'){
-           agent {
-                dockerfile {
-                filename 'Dockerfile.cowsay'    
-                // label 'ubuntu-docker-jdk17-node20'
-                }
-          }
-          steps{
-             sh 'cat /etc/os-release'
-             sh 'node -v'
-             sh 'npm  -v'
-             sh 'cowsay -f dragon This is running on Docker Container'
-          }
+        //        stage('S4-Dockerfile  Agent'){
+        //    agent {
+        //         dockerfile {
+        //         filename 'Dockerfile.cowsay'    
+        //         // label 'ubuntu-docker-jdk17-node20'
+        //         }
+        //   }
+        //   steps{
+        //      sh 'cat /etc/os-release'
+        //      sh 'node -v'
+        //      sh 'npm  -v'
+        //      sh 'cowsay -f dragon This is running on Docker Container'
+        //   }
 
-        }
+        // }
     }
 
 
