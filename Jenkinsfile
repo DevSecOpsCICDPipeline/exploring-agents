@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('S1-Any Agent'){
            steps{
-            sh 'cat /ect/os-release'
+            sh 'cat /etc/os-release'
             sh 'node -v'
             sh 'mvn --version'
            }
