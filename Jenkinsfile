@@ -6,7 +6,7 @@ pipeline {
            steps{
             sh 'cat /ect/os-release'
             sh 'node -v'
-            sh 'maven --version'
+            sh 'mvn --version'
            }
         }
 
@@ -16,7 +16,7 @@ pipeline {
             }
             steps{
                 sh 'cat /etc/os-release'
-                sh 'maven --version'
+                sh 'mvn --version'
             }
         }
     }
