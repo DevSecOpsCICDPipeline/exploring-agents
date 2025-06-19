@@ -24,6 +24,7 @@ pipeline {
                 docker {
                 alwaysPull true
                 image 'node:18-alpine'
+                // label 'ubuntu-docker-jdk17-node20'
                 }
           }
           steps{
