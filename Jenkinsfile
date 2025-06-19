@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('S1-Any Agent'){
            steps{
-            sh 'cat /rtc/os-release'
+            sh 'cat /ect/os-release'
             sh 'node -v'
             sh 'maven --version'
            }
@@ -15,7 +15,7 @@ pipeline {
                 label 'ubuntu-docker-jdk17-node20'
             }
             steps{
-                sh 'cat /rtc/os-release'
+                sh 'cat /etc/os-release'
                 sh 'maven --version'
             }
         }
